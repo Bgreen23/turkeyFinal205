@@ -49,20 +49,20 @@ def logout():
 @login_required
 def backend():
     if request.method == "POST":
-        name = request.form["player"]
+        player = request.form["player"]
         team = request.form["team"]
+        new_player = (player, team)
         db.session.commit()
 
         data = {
-            "id": new_player.id,
-            "player": player
+            "player": player,
+            "team": team
             }
-
-        pusher_client.trigger('table', 'new-record', {'data': data})
 
         return redirect("/backend", code=302)
     else:
         players = Player.query.all()
+
         return render_template('backend.html', players=players)
 
 # The Edit Route
