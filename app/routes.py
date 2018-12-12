@@ -5,9 +5,8 @@ from app import app, db
 from app.forms import LoginForm, RegistrationForm
 from app.models import User, Player
 
-
+# Initial start page
 @app.route('/')
-@app.route('/start')
 def start():
 
     return render_template('start.html')
