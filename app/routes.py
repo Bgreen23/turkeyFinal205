@@ -51,7 +51,7 @@ def backend():
     if request.method == "POST":
         name = request.form["player"]
         team = request.form["team"]
-        db.execute('INSERT INTO Player (name, team) VALUES (name, team)')
+        db.session.commit('INSERT INTO Player (name, team) VALUES (name, team)')
 
         data = {
             "id": new_player.id,
