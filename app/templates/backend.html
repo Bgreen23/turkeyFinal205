@@ -1,0 +1,46 @@
+<!-- /templates/backend.html  -->
+
+<section class="background">
+
+{% extends 'base.html' %}
+
+{% block content %}
+  <form method="POST" id="target">
+    <div class="form-group">
+      <input type="text" class="form-control" name="player" placeholder="Player">
+    </div>
+    <div class="form-group">
+      <input type="text" class="form-control" name="team" placeholder="Team">
+    </div>
+        <button type="submit" class="btn btn-block enterButton">Enter New Player</button>
+      </form>
+      <br/>
+
+      <div class="table-responsive">
+        <table class="table orangeFont" id="players">
+          <tbody>
+          <thead>
+            <tr>
+              <th scope="col">Player Name</th>
+              <th scope="col">Team</th>
+              <th scope="col">Change Player</th>
+            </tr>
+          </thead>
+        </tbody>
+        <!-- {% for player in players %} -->
+        <tbody>
+          <tr id={{ player.id }}>
+            <!-- <th scope="row">{{ player.player }}</th> -->
+            <!-- <td> {{ player.team }} </td> -->
+            <td>
+              <!-- <a href="/edit/{{ player.id }}"><span class="icon glyphicon glyphicon-pencil"></span></a> -->
+              <!-- <a href="/delete/{{ player.id }}"><span class="icon glyphicon glyphicon-trash"></span></a> -->
+            </td>
+            <td> <p>test {{ username }} </p></td>
+          </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+    </div>
+    </section>
+    {% endblock %}
