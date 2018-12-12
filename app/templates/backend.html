@@ -27,16 +27,15 @@
             </tr>
           </thead>
         </tbody>
-        <!-- {% for player in players %} -->
+        {% for player in players %}
         <tbody>
           <tr id={{ player.id }}>
-            <!-- <th scope="row">{{ player.player }}</th> -->
-            <!-- <td> {{ player.team }} </td> -->
+            <th scope="row">{{ player.name }}</th>
+            <td> {{ player.team }} </td>
             <td>
-              <!-- <a href="/edit/{{ player.id }}"><span class="icon glyphicon glyphicon-pencil"></span></a> -->
-              <!-- <a href="/delete/{{ player.id }}"><span class="icon glyphicon glyphicon-trash"></span></a> -->
+              <a href="/edit/{{ player.id }}"><span class="icon glyphicon glyphicon-pencil"></span></a>
+              <a href="/delete/{{ player.id }}"><span class="icon glyphicon glyphicon-trash"></span></a>
             </td>
-            <td> <p>test {{ username }} </p></td>
           </tr>
           {% endfor %}
         </tbody>
