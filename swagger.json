@@ -1,0 +1,54 @@
+{
+  "paths": {
+    "/api/players": {
+      "get": {
+        "summary": "Grabs all players in the database",
+        "responses": {
+          "200": {
+            "description": "Returns all players in the database",
+            "schema": {
+              "x-oad-type": "string",
+              "type": "string",
+              "title": "Name",
+              "description": "Returns their name"
+            },
+            "x-oad-type": "response"
+          },
+          "404": {
+            "description": "Error if no players are in Database",
+            "x-oad-type": "response"
+          }
+        }
+      },
+      "x-oad-type": "operation"
+    },
+    "/api/teams": {
+      "get": {
+        "summary": "Gets all teams in the database",
+        "description": "This grabs all teams that are inside of the database",
+        "responses": {
+          "200": {
+            "description": "Returns teams",
+            "x-oad-type": "response"
+          },
+          "404": {
+            "description": "Error if no teams in database",
+            "schema": {},
+            "x-oad-type": "response"
+          }
+        }
+      },
+      "x-oad-type": "operation"
+    }
+  },
+  "info": {
+    "title": "turkeybowl api",
+    "version": "1.0.0",
+    "description": "This API gets all players and teams inside of my database."
+  },
+  "basePath": "/api/players",
+  "schemes": [
+    "http"
+  ],
+  "swagger": "2.0"
+}

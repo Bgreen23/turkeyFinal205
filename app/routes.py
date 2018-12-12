@@ -5,7 +5,7 @@ from app import app, db
 from app.forms import LoginForm, RegistrationForm
 from app.models import User, Player
 
-
+# Initial start page
 @app.route('/')
 def start():
 
