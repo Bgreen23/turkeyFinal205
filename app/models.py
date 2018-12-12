@@ -35,10 +35,10 @@ class Post(db.Model):
         return '<Post {}>'.format(self.body)
 
 
-# class Player(db.Model):
-#     id = db.Column(db.Integer, primary_key=True)
-#     name = db.Column(db.String(64), index=True)
-#     team = db.Column(db.String(64), index=True)
-#
-#     def __repr__(self):
-#         return '<Player {}>'.format(self.name)
+class Player(db.Model):
+    id = db.Column(db.Integer, primary_key=True)
+    name = db.Column(db.String(64), index=True)
+    team = db.Column(db.String(64), index=True)
+
+    def __repr__(self):
+        return '<Player {}>'.format(self.name)
