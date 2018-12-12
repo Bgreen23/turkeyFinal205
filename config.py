@@ -1,4 +1,5 @@
 import os
+import app from app
 basedir = os.path.abspath(os.path.dirname(__file__))
 port = int(os.environ.get('PORT', 5000))
 
