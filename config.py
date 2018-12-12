@@ -1,6 +1,6 @@
 import os
 basedir = os.path.abspath(os.path.dirname(__file__))
-
+port = int(os.environ.get('PORT', 5000))
 
 class Config(object):
     SECRET_KEY = os.environ.get('SECRET_KEY') or b'\xa9w\xb9{\xbbC;\x0bQ>\xd8\xfb \x03o\x90'

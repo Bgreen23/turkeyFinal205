@@ -7,7 +7,6 @@ from app.models import User, Player
 
 
 @app.route('/')
-@app.route('/start')
 def start():
 
     return render_template('start.html')
